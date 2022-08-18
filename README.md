@@ -46,5 +46,5 @@ Data Analysis Using Power BI . Made a dashboard to get the sales insight.
 
 ## Data Analysis (Power BI)
 **Formula for Normalised_currency column**
-= Table.AddColumn(#"Filtered Rows", "Normalised_currency", each if [currency] = "USD" or 
+> = Table.AddColumn(#"Filtered Rows", "Normalised_currency", each if [currency] = "USD" or 
  [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)
