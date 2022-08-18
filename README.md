@@ -4,6 +4,10 @@ Data Analysis Using Power BI . Made a dashboard to get the sales insight.
 <img width="416" alt="image" src="https://user-images.githubusercontent.com/88205480/185393344-b1348b90-1d3c-47c2-b396-2a005a8535e7.png">
 
 
+## Sales Schema
+
+<img width="154" alt="image" src="https://user-images.githubusercontent.com/88205480/185395913-7af41faf-00c7-45b5-953d-e52763f3f093.png">
+
 
 **1)Show all customer records**
 
