@@ -35,8 +35,16 @@ Data Analysis Using Power BI . Made a dashboard to get the sales insight.
 
 **8)Show total revenue in year 2020, January Month,**
 
-> SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");
+> SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON 
+> transactions.order_date=date.date where date.year=2020 and and date.month_name="January" 
+> and (transactions.currency="INR\r" or transactions.currency="USD\r");
 
 **9)Show total revenue in year 2020 in Chennai**
 
 > SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.market_code="Mark001";
+
+
+## Data Analysis (Power BI)
+**Formula for Normalised_currency column**
+= Table.AddColumn(#"Filtered Rows", "Normalised_currency", each if [currency] = "USD" or 
+ [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)
